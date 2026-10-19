@@ -1,0 +1,52 @@
+{
+  "titulo": "Laboratorio-modular-19-10",
+  "arquivo": "hub.html",
+  "itens": [
+    {
+      "path": "ferramentas/arrumador.html",
+      "nome": "Arrumador de Backups",
+      "desc": "",
+      "on": false,
+      "icone": ""
+    },
+    {
+      "path": "ferramentas/colador.html",
+      "nome": "Colador de Links",
+      "desc": "",
+      "on": false,
+      "icone": ""
+    },
+    {
+      "path": "ferramentas/faxina.html",
+      "nome": "🧹 Faxina de Repetidos",
+      "desc": "",
+      "on": false,
+      "icone": ""
+    },
+    {
+      "path": "ferramentas/numerador.html",
+      "nome": "Numerador de Códigos",
+      "desc": "",
+      "on": false,
+      "icone": ""
+    },
+    {
+      "path": "ferramentas/preparador.html",
+      "nome": "Preparador Universal",
+      "desc": "",
+      "on": false,
+      "icone": ""
+    },
+    {
+      "path": "index.html",
+      "nome": "ProjetoLens — Analisador de Projetos",
+      "desc": "",
+      "on": true,
+      "icone": "icons/icon.svg"
+    }
+  ],
+  "sub": "",
+  "logo": "",
+  "tema": "escuro",
+  "links": []
+}
