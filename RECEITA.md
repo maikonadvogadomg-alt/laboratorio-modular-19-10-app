@@ -1,11 +1,11 @@
 # 🧬 Receita para recriar: ProjetoLens — Analisador de Projetos
 
-_Gerada sem IA, lendo 70 arquivo(s). Serve para remontar este app como HTML modular — com qualquer IA, um arquivo por vez._
+_Gerada sem IA, lendo 75 arquivo(s). Serve para remontar este app como HTML modular — com qualquer IA, um arquivo por vez._
 
 ## 1. O que é
 
 - **Nome:** ProjetoLens — Analisador de Projetos
-- **Partes de código:** 43 (6 tela, 26 logica, 0 servidor, 0 dados, 11 estilo)
+- **Partes de código:** 44 (7 tela, 26 logica, 0 servidor, 0 dados, 11 estilo)
 - **Tem servidor (rotas /api):** não — dá para ser só HTML
 - **Peças de fora (bibliotecas):** child_process, electron, fs, http, path, readline, url, x, zlib
 
@@ -45,6 +45,7 @@ js/98-colador.js      ← Colador de Links — 🔗 Colador de Links (era ferram
 js/98-faxina.js       ← 🧹 Faxina de Repetidos — 🧹 Faxina de Repetidos (era ferramentas/faxina.html)
 js/98-numerador.js    ← Numerador de Códigos — 🔢 Numerador de Códigos (era ferramentas/numerador.html)
 js/98-preparador.js   ← Preparador Universal — 🧰 Preparador Universal (era ferramentas/preparador.html)
+js/98-hub.js          ← Laboratorio-modular-19-10 — Laboratorio-modular-19-10 (era hub.html)
 js/98-inicio.js       ← ProjetoLens — Analisador de Projetos — ProjetoLens (era index.html)
 js/99-app.js          ← o último: monta a tela com o que embarcou
 ```
@@ -84,18 +85,19 @@ js/99-app.js          ← o último: monta a tela com o que embarcou
 | 29 | `ferramentas/faxina.html` | `js/98-faxina.js` | tela | 🧹 Faxina de Repetidos — 🧹 Faxina de Repetidos | — |
 | 30 | `ferramentas/numerador.html` | `js/98-numerador.js` | tela | Numerador de Códigos — 🔢 Numerador de Códigos | — |
 | 31 | `ferramentas/preparador.html` | `js/98-preparador.js` | tela | Preparador Universal — 🧰 Preparador Universal | package.json |
-| 32 | `css/00-casca.css` | css/app.css | estilo | ===== RESET & VARIÁVEIS ===== | — |
-| 33 | `css/02-importar.css` | css/app.css | estilo | ===== IMPORTADOR ===== | — |
-| 34 | `css/03-dependencias.css` | css/app.css | estilo | ===== DEPS MODULE ===== | — |
-| 35 | `css/04-analisar.css` | css/app.css | estilo | ===== ANALYZER MODULE ===== | — |
-| 36 | `css/05-plano.css` | css/app.css | estilo | ===== PLANNER MODULE ===== | — |
-| 37 | `css/06-scripts.css` | css/app.css | estilo | ===== SCRIPTS MODULE ===== | — |
-| 38 | `css/07-terminal.css` | css/app.css | estilo | ===== TERMINAL MODULE ===== | — |
-| 39 | `css/08-exportar.css` | css/app.css | estilo | ===== EXPORTADOR MODULE ===== | — |
-| 40 | `css/09-integracao.css` | css/app.css | estilo | ===== INTEGRAÇÃO FINAL ===== | — |
-| 41 | `css/10-celular.css` | css/app.css | estilo | 10-celular.css — feito na montagem: o ProjetoLens no celular. A barra lateral sai do camin | — |
-| 42 | `css/11-lab.css` | css/app.css | estilo | 11-lab.css — visual das telas do Laboratório (Mapa, Prévia) | — |
-| 43 | `index.html` | `js/98-inicio.js` | tela | ProjetoLens — Analisador de Projetos — ProjetoLens | 00-casca.css, 02-importar.css, 03-dependencias.css, 04-analisar.css |
+| 32 | `hub.html` | `js/98-hub.js` | tela | Laboratorio-modular-19-10 — Laboratorio-modular-19-10 | hub.webmanifest, favicon.ico, icon.svg, apple-touch-icon.png |
+| 33 | `css/00-casca.css` | css/app.css | estilo | ===== RESET & VARIÁVEIS ===== | — |
+| 34 | `css/02-importar.css` | css/app.css | estilo | ===== IMPORTADOR ===== | — |
+| 35 | `css/03-dependencias.css` | css/app.css | estilo | ===== DEPS MODULE ===== | — |
+| 36 | `css/04-analisar.css` | css/app.css | estilo | ===== ANALYZER MODULE ===== | — |
+| 37 | `css/05-plano.css` | css/app.css | estilo | ===== PLANNER MODULE ===== | — |
+| 38 | `css/06-scripts.css` | css/app.css | estilo | ===== SCRIPTS MODULE ===== | — |
+| 39 | `css/07-terminal.css` | css/app.css | estilo | ===== TERMINAL MODULE ===== | — |
+| 40 | `css/08-exportar.css` | css/app.css | estilo | ===== EXPORTADOR MODULE ===== | — |
+| 41 | `css/09-integracao.css` | css/app.css | estilo | ===== INTEGRAÇÃO FINAL ===== | — |
+| 42 | `css/10-celular.css` | css/app.css | estilo | 10-celular.css — feito na montagem: o ProjetoLens no celular. A barra lateral sai do camin | — |
+| 43 | `css/11-lab.css` | css/app.css | estilo | 11-lab.css — visual das telas do Laboratório (Mapa, Prévia) | — |
+| 44 | `index.html` | `js/98-inicio.js` | tela | ProjetoLens — Analisador de Projetos — ProjetoLens | 00-casca.css, 02-importar.css, 03-dependencias.css, 04-analisar.css |
 
 ## 4. Montar passo a passo (cada bloco é um pedido pronto: 📋 Copiar → colar na IA)
 
@@ -346,7 +348,15 @@ O original usava as bibliotecas electron, path, fs, http: em HTML puro, use a ve
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 31 — `js/98-inicio.js` (era `index.html`, 1674 linhas)
+### Passo 31 — `js/98-hub.js` (era `hub.html`, 81 linhas)
+
+```text
+Crie js/98-hub.js. Ele faz: Laboratorio-modular-19-10 — Laboratorio-modular-19-10.
+No app original ele tinha estas funções/partes: rec, esc, card, show.
+Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
+```
+
+### Passo 32 — `js/98-inicio.js` (era `index.html`, 1674 linhas)
 
 ```text
 Crie js/98-inicio.js. Ele faz: ProjetoLens — Analisador de Projetos — ProjetoLens.
@@ -354,10 +364,10 @@ Ele usa o que já foi criado em: js/15-casca.js, js/20-importar.js, js/25-depend
 Registre com APP.registrar({ nome, icone, abrir }). Devolva só o arquivo completo.
 ```
 
-### Passo 32 — `js/99-app.js` e conferir
+### Passo 33 — `js/99-app.js` e conferir
 
 ```text
-Crie js/99-app.js: ele olha APP.modulos e monta o menu/abas com um botão para cada módulo. Depois, me mande o index.html atualizado com todos os <script src="js/…"> na ordem certa: js/00-core.js, js/10-preload.js, js/15-casca.js, js/20-importar.js, js/25-dependencias.js, js/30-analisar.js, js/35-plano.js, js/40-05a-markdown.js, js/45-scripts.js, js/50-06b-scripts-fim.js, js/55-terminal.js, js/60-07a-busca-npm.js, js/65-exportar.js, js/70-integracao.js, js/75-celular.js, js/80-lab-base.js, js/85-lab-mapa.js, js/90-lab-previa.js, js/91-lab-pesquisa.js, js/92-lab-comparar.js, js/93-15a-tar.js, js/94-lab-ferramentas.js, js/95-juntar.js, js/96-kit-replit.js, js/97-organizar.js, js/98-servir.js, js/98-arrumador.js, js/98-colador.js, js/98-faxina.js, js/98-numerador.js, js/98-preparador.js, js/98-inicio.js, js/99-app.js.
+Crie js/99-app.js: ele olha APP.modulos e monta o menu/abas com um botão para cada módulo. Depois, me mande o index.html atualizado com todos os <script src="js/…"> na ordem certa: js/00-core.js, js/10-preload.js, js/15-casca.js, js/20-importar.js, js/25-dependencias.js, js/30-analisar.js, js/35-plano.js, js/40-05a-markdown.js, js/45-scripts.js, js/50-06b-scripts-fim.js, js/55-terminal.js, js/60-07a-busca-npm.js, js/65-exportar.js, js/70-integracao.js, js/75-celular.js, js/80-lab-base.js, js/85-lab-mapa.js, js/90-lab-previa.js, js/91-lab-pesquisa.js, js/92-lab-comparar.js, js/93-15a-tar.js, js/94-lab-ferramentas.js, js/95-juntar.js, js/96-kit-replit.js, js/97-organizar.js, js/98-servir.js, js/98-arrumador.js, js/98-colador.js, js/98-faxina.js, js/98-numerador.js, js/98-preparador.js, js/98-hub.js, js/98-inicio.js, js/99-app.js.
 ```
 
 ## 5. Conferir no final
